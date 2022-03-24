@@ -15,10 +15,5 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-
-cd lede/package/lean  
-rm -rf luci-theme-neobird  
-git clone https://github.com/thinktip/luci-theme-neobird.git  
-cd ~/lede/
-make menuconfig #choose LUCI->Theme->Luci-theme-neobird  
-make -j1 V=s
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
